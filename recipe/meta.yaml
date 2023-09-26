@@ -14,7 +14,6 @@ build:
   number: {{ build_number }}
   entry_points:
     - bump-my-version = bumpversion.cli:cli
-    - bumpversion = bumpversion.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -27,7 +26,8 @@ requirements:
   run:
     - python >=3.8
     - click
-    - pydantic <2.0.0
+    - pydantic
+    - pydantic-settings
     - rich-click
     - rich
     - tomlkit
