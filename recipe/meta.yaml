@@ -38,7 +38,6 @@ test:
   commands:
     - pip check
     - bump-my-version --help
-    - bumpversion --help
   requires:
     - pip
 
