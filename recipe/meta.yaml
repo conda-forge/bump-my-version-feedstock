@@ -1,5 +1,5 @@
 {% set name = "bump-my-version" %}
-{% set version = "0.12.0" %}
+{% set version = "0.17.2" %}
 {% set build_number = 0 %}
 
 package:
@@ -28,6 +28,7 @@ requirements:
     - click
     - pydantic
     - pydantic-settings
+    - questionary
     - rich-click
     - rich
     - tomlkit
