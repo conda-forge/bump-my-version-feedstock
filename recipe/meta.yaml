@@ -1,5 +1,5 @@
 {% set name = "bump-my-version" %}
-{% set version = "0.12.0" %}
+{% set version = "0.17.2" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f5a4bd0d07e6338b0ac1b5e48188934cc6d529da91e147be786fd616236813d
+  sha256: 5ec8ddf39ca23e34d1233f237de403e3f2db3b115724aa28e41fb77c0cfc0089
 
 build:
   number: {{ build_number }}
@@ -28,6 +28,7 @@ requirements:
     - click
     - pydantic
     - pydantic-settings
+    - questionary
     - rich-click
     - rich
     - tomlkit
