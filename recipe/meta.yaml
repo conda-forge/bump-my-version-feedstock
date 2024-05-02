@@ -32,6 +32,7 @@ requirements:
     - rich-click
     - rich
     - tomlkit
+    - wcmatch
 
 test:
   imports:
