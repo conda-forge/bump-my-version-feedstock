@@ -1,5 +1,5 @@
 {% set name = "bump-my-version" %}
-{% set version = "0.20.3" %}
+{% set version = "0.21.0" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 282acd1167913f3e5e24a10ceab9b14d027aadc1355fdbb1e3d1f2c2bd4b2130
+  sha256: c3f1a31e32345679b517cbba99a0875457ee45d7ba6189fcd2a74d3ddae41515
 
 build:
   number: {{ build_number }}
