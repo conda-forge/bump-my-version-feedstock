@@ -1,6 +1,6 @@
 {% set name = "bump-my-version" %}
 {% set version = "0.21.1" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -15,30 +15,29 @@ build:
   entry_points:
     - bump-my-version = bumpversion.cli:cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python >=3.8
-    - setuptools >=40.9.0
-    - wheel
+    - setuptools
     - pip
   run:
     - python >=3.8
     - click
-    - pydantic
+    - pydantic >=2.0.0
     - pydantic-settings
     - questionary
     - rich-click
     - rich
     - tomlkit
-    - wcmatch
+    - wcmatch >=8.5.1
 
 test:
   imports:
     - bumpversion
   commands:
-#    - pip check
+    - pip check
     - bump-my-version --help
   requires:
     - pip
