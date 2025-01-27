@@ -1,6 +1,6 @@
 {% set name = "bump-my-version" %}
 {% set version = "0.29.0" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=1.25.0
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - click
     - pydantic >=2.0.0
     - pydantic-settings
@@ -41,6 +41,7 @@ test:
     - bump-my-version --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/callowayproject/bump-my-version
