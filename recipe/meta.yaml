@@ -1,5 +1,5 @@
 {% set name = "bump-my-version" %}
-{% set version = "0.30.2" %}
+{% set version = "0.32.0" %}
 {% set build_number = 0 %}
 {% set python_min = "3.10" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: f6147c737175c4054fbbf45931d39857d3a7ad9cc5769030bfda9a93b638d2ef
+  sha256: e8d964d13ba3ab6c090a872d0b5094ecf8df7ae8052b09288ace00fc6647df27
 
 build:
   number: {{ build_number }}
@@ -26,6 +26,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - click
+    - httpx
     - pydantic >=2.0.0
     - pydantic-settings
     - questionary
