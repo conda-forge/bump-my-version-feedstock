@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - click
+    - click <8.3.0
     - httpx
     - pydantic >=2.0.0
     - pydantic-settings
