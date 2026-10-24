@@ -1,5 +1,5 @@
 {% set name = "bump-my-version" %}
-{% set version = "1.6.2" %}
+{% set version = "1.6.4" %}
 {% set build_number = 0 %}
 {% set python_min = "3.10" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 29d111e4767b28e8e49bfbd29f8e332c0b17e11f58089f630b877d623d4d541a
+  sha256: 9699550488ecddddbf3ce246d764a218c0e66b79528cda620d7ff46a0d1bdd93
 
 build:
   number: {{ build_number }}
