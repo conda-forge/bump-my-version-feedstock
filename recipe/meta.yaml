@@ -1,5 +1,5 @@
 {% set name = "bump-my-version" %}
-{% set version = "1.8.1" %}
+{% set version = "1.8.4" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6457f2a1b964df60ff7d532e61d41422f19dbf936c9752bdff25d79f63768069
+  sha256: c9f4a87e467eda354d1793fecbdc642872b1b68687b00b62054ce6be74751a68
 
 build:
   number: {{ build_number }}
